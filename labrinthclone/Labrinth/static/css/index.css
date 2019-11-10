@@ -1,0 +1,170 @@
+body{
+  margin-bottom: 150px;
+}
+
+.logo{
+  display: inline-block;
+  width: 1200px;
+  margin-top: 150px;
+  /* margin-bottom: 100px;  */
+
+}
+
+.navbar-brand{
+  font-size: 50px;
+  /* font-family: 'Yeon Sung', cursive; */
+  font-family: 'Lobster', cursive;
+}
+
+.beneath{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+}
+
+/*COLOR CHANGER*/
+/*Credit and Source: http://codepen.io/thapliyalshivam/pen/dvgXVO*/
+.loader{
+  filter:hue-rotate(0deg);
+  color: linear-gradient(45deg,#0f8,#08f);
+  animation:hue 5000ms infinite linear;
+}
+
+@keyframes spinify {
+  0% {
+    transform: translate(0px,0px);
+
+  }
+  33% {
+    transform: translate(0px,24px);
+    border-radius:100%;
+    width:10px;
+    height:10px;
+
+  }
+   66% {
+    transform:translate(0px,-16px);
+  }
+
+   88% {
+    transform:translate(0px,4px);
+
+  }
+  100% {
+    transform:translate(0px,0px);
+  }
+}
+@keyframes hue{
+  0%{filter: hue-rotate(0deg);}
+  100%{filter:hue-rotate(360deg);}
+
+}
+
+/* _________________ */
+
+.Element {
+  position: relative;
+  width: 200px;
+  display: block;
+}
+
+.Element > img {
+  box-shadow: 0 0 20px #bac3c3;
+}
+
+.Element > * {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.Element::before,
+.Element::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: cyan;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+  background-image: var(--image);
+  background-size: 200%;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.Element::after {
+  bottom: 0;
+  right: 0;
+  background-position: right bottom;
+}
+
+.Border {
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  border: 15px #eb311f solid;
+  transform: rotate(45deg);
+}
+
+
+
+@use postcss-preset-env {
+  stage: 0;
+  autoprefixer: {
+    grid: true;
+  }
+  browsers: [
+    "last 1 Chrome versions",
+    "last 1 Firefox versions",
+    "last 1 Safari versions",
+    "last 1 Edge versions"
+  ]
+}
+
+
+/* Style all font awesome icons */
+.fa {
+ padding: 20px;
+ font-size: 30px;
+ width: 50px;
+ text-align: center;
+ text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+ opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+ background: #3B5998;
+ color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+ background: #55ACEE;
+ color: white;
+}
+/*--------------------*/
+/* .about{
+  text-align: center;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 2em
+} */
+
+#study{
+  text-align: center;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 3em
+}
+
+#creator{
+  font-family: 'ZCOOL XiaoWei', serif;
+}
